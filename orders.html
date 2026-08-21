@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Tags -->
+  <title>Order Online — Fresh Food Delivered | CRAVEBOX</title>
+  <meta name="description" content="Order fresh smash burgers, pizzas, wraps, rice bowls and desserts online from CRAVEBOX Cloud Kitchen. Standard 30-minute delivery. Pay securely at checkout.">
+  <meta property="og:title" content="Order Online — Fresh Food Delivered | CRAVEBOX">
+  <meta property="og:description" content="Add your favorites to the cart and place your order for instant delivery from our kitchen.">
+  <meta property="og:type" content="website">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <nav class="crave-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand">
+        <i class="bi bi-box-seam-fill"></i> CRAVE<span>BOX</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="nav-links-desktop d-none d-lg-flex align-items-center gap-4">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="orders.html" class="nav-link active">Order Online</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Right Action CTA & Controls -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <div class="controls-container">
+          <button class="control-btn theme-toggle-btn" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+        </div>
+        <a href="orders.html" class="btn-crave btn-crave-primary py-2 px-4">
+          ORDER NOW <span class="badge bg-white text-danger ms-2 desktop-cart-count" style="display:none; font-size:0.75rem;">0</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="hamburger-btn" aria-label="Toggle Menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="crave-offcanvas">
+    <div class="crave-offcanvas-header">
+      <a href="index.html" class="navbar-brand">
+        <i class="bi bi-box-seam-fill"></i> CRAVE<span>BOX</span>
+      </a>
+      <button class="crave-offcanvas-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="crave-offcanvas-nav">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="menu.html" class="nav-link">Menu</a></li>
+      <li><a href="offers.html" class="nav-link">Offers</a></li>
+      <li><a href="orders.html" class="nav-link active">Order Online</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="crave-offcanvas-footer">
+      <div class="controls-container justify-content-center">
+        <button class="control-btn theme-toggle-btn"><i class="bi bi-sun-fill"></i></button>
+      </div>
+      <a href="orders.html" class="btn-crave btn-crave-primary w-100 text-center justify-content-center">ORDER NOW</a>
+    </div>
+  </div>
+
+  <!-- Order Hero (Split-Screen Design) -->
+  <section class="hero-section" style="min-height: 50vh; padding-top: 130px; display: flex; align-items: center;">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-overlay" style="background: linear-gradient(to right, rgba(17,17,17,0.92) 40%, rgba(17,17,17,0.7) 70%, rgba(17,17,17,0.4) 100%);"></div>
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-6 text-start">
+          <span class="eyebrow fade-up-element animated">Kitchen Dispatch</span>
+          <h1 class="hero-title text-white mb-3 fade-up-element animated" style="animation-delay: 0.1s; font-size: clamp(2.5rem, 5vw, 4.5rem);">WHAT'S YOUR CRAVING?</h1>
+          <p class="lead text-white-50 fade-up-element animated" style="animation-delay: 0.2s;">
+            Choose your favorites below, fill in your delivery details, and we'll get them cooking right away.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Ordering & Checkout Split Layout -->
+  <section class="editorial-section">
+    <div class="container">
+      <div class="order-layout-grid">
+        
+        <!-- Left Side: Catalog Lists -->
+        <div>
+          <!-- Categories Quick Filter Tabs -->
+          <div class="order-categories-tabs fade-up-element">
+            <button class="order-tab active" onclick="document.querySelectorAll('.order-item-card-wrapper').forEach(e => e.style.display = 'block'); document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active')); this.classList.add('active');">All Items</button>
+            <button class="order-tab" onclick="document.querySelectorAll('.order-item-card-wrapper').forEach(e => e.style.display = e.getAttribute('data-cat') === 'burgers' ? 'block' : 'none'); document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active')); this.classList.add('active');">Burgers</button>
+            <button class="order-tab" onclick="document.querySelectorAll('.order-item-card-wrapper').forEach(e => e.style.display = e.getAttribute('data-cat') === 'pizza' ? 'block' : 'none'); document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active')); this.classList.add('active');">Pizza</button>
+            <button class="order-tab" onclick="document.querySelectorAll('.order-item-card-wrapper').forEach(e => e.style.display = e.getAttribute('data-cat') === 'wraps' ? 'block' : 'none'); document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active')); this.classList.add('active');">Wraps</button>
+            <button class="order-tab" onclick="document.querySelectorAll('.order-item-card-wrapper').forEach(e => e.style.display = e.getAttribute('data-cat') === 'sides' ? 'block' : 'none'); document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active')); this.classList.add('active');">Sides</button>
+            <button class="order-tab" onclick="document.querySelectorAll('.order-item-card-wrapper').forEach(e => e.style.display = e.getAttribute('data-cat') === 'drinks' ? 'block' : 'none'); document.querySelectorAll('.order-tab').forEach(t => t.classList.remove('active')); this.classList.add('active');">Drinks</button>
+          </div>
+
+          <!-- Catalog List -->
+          <div class="order-item-list">
+            <!-- Item 1 -->
+            <div class="order-item-card-wrapper" data-cat="burgers">
+              <div class="order-item-card">
+                <div class="order-item-img">
+                  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=200&q=80" alt="Smoky Smash Burger">
+                </div>
+                <div class="order-item-details">
+                  <h3 class="order-item-name text-white">Smoky Smash Burger</h3>
+                  <p class="order-item-desc text-white-50">Double smash patty, caramelized onions, smoked cheese, special house sauce, brioche bun.</p>
+                  <span class="order-item-price">₹249</span>
+                </div>
+                <button onclick="addToCart('smash-burger', 'Smoky Smash Burger', 249, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary py-2 px-3 btn-add-cart" data-id="smash-burger">
+                  ADD <i class="bi text-white bi-plus-lg ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="order-item-card-wrapper" data-cat="burgers">
+              <div class="order-item-card">
+                <div class="order-item-img">
+                  <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=200&q=80" alt="Fire Chicken Burger">
+                </div>
+                <div class="order-item-details">
+                  <h3 class="order-item-name text-white">Fire Chicken Burger</h3>
+                  <p class="order-item-desc text-white-50">Crispy fried chicken breast dipped in hot chili oil, creamy coleslaw, jalapeños.</p>
+                  <span class="order-item-price">₹279</span>
+                </div>
+                <button onclick="addToCart('fire-burger', 'Fire Chicken Burger', 279, 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary py-2 px-3 btn-add-cart" data-id="fire-burger">
+                  ADD <i class="bi text-white bi-plus-lg ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="order-item-card-wrapper" data-cat="pizza">
+              <div class="order-item-card">
+                <div class="order-item-img">
+                  <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=200&q=80" alt="Peri Peri Chicken Pizza">
+                </div>
+                <div class="order-item-details">
+                  <h3 class="order-item-name text-white">Peri Peri Chicken Pizza</h3>
+                  <p class="order-item-desc text-white-50">Spicy peri-peri chicken chunks, peppers, mozzarella, on a stone-baked sourdough crust.</p>
+                  <span class="order-item-price">₹399</span>
+                </div>
+                <button onclick="addToCart('peri-peri-pizza', 'Peri Peri Pizza', 399, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary py-2 px-3 btn-add-cart" data-id="peri-peri-pizza">
+                  ADD <i class="bi text-white bi-plus-lg ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="order-item-card-wrapper" data-cat="wraps">
+              <div class="order-item-card">
+                <div class="order-item-img">
+                  <img src="https://images.unsplash.com/photo-1626700051175-6518c4793f4f?auto=format&fit=crop&w=200&q=80" alt="Spicy Paneer Tikka Wrap">
+                </div>
+                <div class="order-item-details">
+                  <h3 class="order-item-name text-white">Paneer Tikka Wrap</h3>
+                  <p class="order-item-desc text-white-50">Clay-oven roasted paneer cubes rolled in flatbread with fresh mint sauce, sliced onion.</p>
+                  <span class="order-item-price">₹169</span>
+                </div>
+                <button onclick="addToCart('paneer-wrap', 'Paneer Tikka Wrap', 169, 'https://images.unsplash.com/photo-1626700051175-6518c4793f4f?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary py-2 px-3 btn-add-cart" data-id="paneer-wrap">
+                  ADD <i class="bi text-white bi-plus-lg ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="order-item-card-wrapper" data-cat="sides">
+              <div class="order-item-card">
+                <div class="order-item-img">
+                  <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=200&q=80" alt="Loaded Peri Peri Fries">
+                </div>
+                <div class="order-item-details">
+                  <h3 class="order-item-name text-white">Loaded Peri Peri Fries</h3>
+                  <p class="order-item-desc text-white-50">Crisp potato fries dusted with peri peri seasoning, melted cheddar sauce, green onions.</p>
+                  <span class="order-item-price">₹149</span>
+                </div>
+                <button onclick="addToCart('peri-fries', 'Loaded Peri Peri Fries', 149, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary py-2 px-3 btn-add-cart" data-id="peri-fries">
+                  ADD <i class="bi text-white bi-plus-lg ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="order-item-card-wrapper" data-cat="drinks">
+              <div class="order-item-card">
+                <div class="order-item-img">
+                  <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=200&q=80" alt="Fresh Lemon Mint Cooler">
+                </div>
+                <div class="order-item-details">
+                  <h3 class="order-item-name text-white">Fresh Lemon Cooler</h3>
+                  <p class="order-item-desc text-white-50">A dynamic blend of fresh squeezed lemons, mint leaves, soda water, and ice.</p>
+                  <span class="order-item-price">₹89</span>
+                </div>
+                <button onclick="addToCart('lemon-cooler', 'Fresh Lemon Cooler', 89, 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary py-2 px-3 btn-add-cart" data-id="lemon-cooler">
+                  ADD <i class="bi text-white bi-plus-lg ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout Form -->
+          <div class="delivery-form-box fade-up-element">
+            <h2 class="form-title text-white">DELIVERY INFORMATION</h2>
+            <form id="checkout-form">
+              <div class="row">
+                <div class="col-md-6 premium-form-group">
+                  <label for="cust-name">Full Name *</label>
+                  <input type="text" id="cust-name" class="premium-form-control" required placeholder="Aishwarya Sen">
+                </div>
+                <div class="col-md-6 premium-form-group">
+                  <label for="cust-phone">Phone Number *</label>
+                  <input type="tel" id="cust-phone" class="premium-form-control" required placeholder="+91 98765 43210">
+                </div>
+                <div class="col-12 premium-form-group">
+                  <label for="cust-email">Email Address *</label>
+                  <input type="email" id="cust-email" class="premium-form-control" required placeholder="aishwarya@gmail.com">
+                </div>
+                <div class="col-12 premium-form-group">
+                  <label for="cust-address">Delivery Address *</label>
+                  <input type="text" id="cust-address" class="premium-form-control" required placeholder="Flat 402, Block C, Green Meadows Apartments">
+                </div>
+                <div class="col-md-6 premium-form-group">
+                  <label for="cust-city">City *</label>
+                  <input type="text" id="cust-city" class="premium-form-control" required placeholder="Noida">
+                </div>
+                <div class="col-md-6 premium-form-group">
+                  <label for="cust-zip">Postal Code *</label>
+                  <input type="text" id="cust-zip" class="premium-form-control" required placeholder="201301">
+                </div>
+                <div class="col-12 premium-form-group">
+                  <label for="cust-instr">Delivery Instructions</label>
+                  <textarea id="cust-instr" class="premium-form-control" rows="3" placeholder="Leave at the reception, ring door bell twice..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn-crave btn-crave-primary w-100 mt-4 justify-content-center">PLACE ORDER</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Side: Sticky Checkout Cart Summary Panel -->
+        <div>
+          <div class="sticky-cart-panel fade-up-element">
+            <h2 class="cart-title text-white">
+              YOUR ORDER <i class="bi bi-cart3 text-danger"></i>
+            </h2>
+            
+            <!-- Cart Items container -->
+            <div class="cart-items-container">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Promo Input in Cart -->
+            <div class="d-flex gap-2 mb-4">
+              <input type="text" id="promo-code-input" class="form-control bg-dark border-secondary text-white" style="font-size:0.85rem;" placeholder="CRAVE20" aria-label="Discount Code">
+              <button type="button" id="apply-promo-btn" class="btn btn-danger btn-sm text-uppercase fw-bold" style="font-size:0.75rem;">APPLY</button>
+            </div>
+
+            <!-- Subtotals -->
+            <div class="cart-summary">
+              <div class="cart-row-summary">
+                <span class="text-white-50">Subtotal</span>
+                <span id="cart-subtotal" class="text-white fw-bold">₹0</span>
+              </div>
+              <div class="cart-row-summary">
+                <span class="text-white-50">Delivery Charge</span>
+                <span id="cart-delivery" class="text-white fw-bold">₹0</span>
+              </div>
+              <div class="cart-row-summary">
+                <span class="text-white-50">Discount</span>
+                <span id="cart-discount" class="text-success fw-bold">-₹0</span>
+              </div>
+              <div class="cart-row-summary cart-total-row">
+                <span>TOTAL</span>
+                <span id="cart-total">₹0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Order status progress tracking -->
+  <section class="order-progress-section">
+    <div class="container text-center">
+      <span class="eyebrow">Realtime Tracking</span>
+      <h2 class="section-title text-white">TRACK YOUR CRAVING</h2>
+      <p class="text-white-50 mx-auto" style="max-width: 500px;">
+        Once your order is placed, watch the status bar update dynamically as our kitchen gets working.
+      </p>
+
+      <div class="progress-steps-wrapper">
+        <div class="progress-line-bg"></div>
+        <div class="progress-line-active"></div>
+        
+        <!-- Step 1 -->
+        <div class="progress-step completed active">
+          <div class="progress-step-circle"><i class="bi bi-receipt"></i></div>
+          <span class="progress-step-label text-white">ORDER PLACED</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="progress-step">
+          <div class="progress-step-circle"><i class="bi bi-fire"></i></div>
+          <span class="progress-step-label text-white">PREPARING</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="progress-step">
+          <div class="progress-step-circle"><i class="bi bi-box-seam"></i></div>
+          <span class="progress-step-label text-white">PACKED</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="progress-step">
+          <div class="progress-step-circle"><i class="bi bi-bicycle"></i></div>
+          <span class="progress-step-label text-white">ON THE WAY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="crave-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="footer-logo">
+            <i class="bi bi-box-seam-fill"></i> CRAVE<span>BOX</span>
+          </a>
+          <p class="mb-4">
+            Fresh food. Bold flavors. Delivered fast. We prepare restaurant-quality meals in our modern cloud kitchen and deliver them hot to your door.
+          </p>
+          <div class="contact-social-icons">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <h4 class="footer-link-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="orders.html">Order Online</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h4 class="footer-link-heading">Contact Info</h4>
+          <ul class="footer-links-list text-white-50">
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-geo-alt-fill text-danger"></i> Sector 62, Noida, UP, India</li>
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-telephone-fill text-danger"></i> +91 98765 43210</li>
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-envelope-fill text-danger"></i> support@cravebox.in</li>
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-clock-fill text-danger"></i> 11:00 AM — 11:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h4 class="footer-link-heading">Subscribe</h4>
+          <p class="mb-3">Get exclusive offers, custom discount coupons, and new menu notifications.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required aria-label="Email Address">
+            <button type="submit" class="btn-crave btn-crave-primary py-2 px-3">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="m-0 text-white-50">&copy; <span id="current-year"></span> CRAVEBOX. All rights reserved.</p>
+        <p class="m-0 text-white-50">Designed with passion for premium cravings.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Cart Badge Floating -->
+  <a href="orders.html" class="mobile-cart-badge">
+    <i class="bi bi-cart3"></i>
+    <span class="mobile-cart-count">0</span>
+  </a>
+
+  <!-- Toast Container -->
+  <div class="crave-toast"></div>
+
+  <!-- Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

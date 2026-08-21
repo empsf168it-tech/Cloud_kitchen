@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Tags -->
+  <title>CRAVEBOX — Fresh Food. Fast Delivery.</title>
+  <meta name="description" content="Premium Cloud Kitchen delivering restaurant-quality fresh burgers, pizza, wraps, rice bowls and desserts straight to your doorstep. Hot, fast, and satisfying.">
+  <meta property="og:title" content="CRAVEBOX — Fresh Food. Fast Delivery.">
+  <meta property="og:description" content="Gourmet comfort food freshly prepared in our cloud kitchen and delivered fast.">
+  <meta property="og:type" content="website">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <nav class="crave-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand">
+        <i class="bi bi-box-seam-fill"></i> CRAVE<span>BOX</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="nav-links-desktop d-none d-lg-flex align-items-center gap-4">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="orders.html" class="nav-link">Order Online</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Right Action CTA & Controls -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <div class="controls-container">
+          <button class="control-btn theme-toggle-btn" title="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+        </div>
+        <a href="orders.html" class="btn-crave btn-crave-primary py-2 px-4">
+          ORDER NOW <span class="badge bg-white text-danger ms-2 desktop-cart-count" style="display:none; font-size:0.75rem;">0</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="hamburger-btn" aria-label="Toggle Menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="crave-offcanvas">
+    <div class="crave-offcanvas-header">
+      <a href="index.html" class="navbar-brand">
+        <i class="bi bi-box-seam-fill"></i> CRAVE<span>BOX</span>
+      </a>
+      <button class="crave-offcanvas-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="crave-offcanvas-nav">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="menu.html" class="nav-link">Menu</a></li>
+      <li><a href="offers.html" class="nav-link">Offers</a></li>
+      <li><a href="orders.html" class="nav-link">Order Online</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="crave-offcanvas-footer">
+      <div class="controls-container justify-content-center">
+        <button class="control-btn theme-toggle-btn"><i class="bi bi-sun-fill"></i></button>
+      </div>
+      <a href="orders.html" class="btn-crave btn-crave-primary w-100 text-center justify-content-center">ORDER NOW</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-start">
+          <span class="eyebrow fade-up-element animated">Welcome to Cravebox</span>
+          <h1 class="hero-title text-white fade-up-element animated" style="animation-delay: 0.1s;">
+            BIG CRAVINGS.<br>FRESHLY MADE.<br>DELIVERED FAST.
+          </h1>
+          <p class="lead text-white-50 my-4 fade-up-element animated" style="max-width: 550px; animation-delay: 0.2s;">
+            Freshly prepared gourmet meals, bold flavors, and chef-crafted comfort food delivered directly from our kitchen to your doorstep in 30 minutes.
+          </p>
+          <div class="d-flex flex-wrap gap-3 fade-up-element animated" style="animation-delay: 0.3s;">
+            <a href="orders.html" class="btn-crave btn-crave-primary">ORDER NOW</a>
+            <a href="menu.html" class="btn-crave btn-crave-secondary">EXPLORE MENU</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Badges -->
+    <div class="floating-badge badge-delivery d-none d-md-flex">
+      <i class="bi bi-speedometer2 text-danger fs-3"></i>
+      <div>
+        <h6 class="m-0 text-white fw-bold">30 MINS</h6>
+        <small class="text-white-50">Delivery Time</small>
+      </div>
+    </div>
+    <div class="floating-badge badge-order d-none d-md-flex">
+      <i class="bi bi-check-circle-fill text-success fs-3"></i>
+      <div>
+        <h6 class="m-0 text-white fw-bold">100% FRESH</h6>
+        <small class="text-white-50">Cooked to Order</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Order Categories -->
+  <section class="category-section">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="eyebrow">Quick Select</span>
+          <h2 class="h3 m-0">What are you craving?</h2>
+        </div>
+      </div>
+      <div class="category-scroll">
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=80&h=80&q=80" alt="Burgers">
+          <span>Burgers</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=80&h=80&q=80" alt="Pizza">
+          <span>Pizza</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1626700051175-6518c4793f4f?auto=format&fit=crop&w=80&h=80&q=80" alt="Wraps">
+          <span>Wraps</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=80&h=80&q=80" alt="Chicken">
+          <span>Chicken</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=80&h=80&q=80" alt="Rice Bowls">
+          <span>Rice Bowls</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=80&h=80&q=80" alt="Combos">
+          <span>Combos</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=80&h=80&q=80" alt="Desserts">
+          <span>Desserts</span>
+        </a>
+        <a href="menu.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=80&h=80&q=80" alt="Drinks">
+          <span>Drinks</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Picks (Asymmetric Layout) -->
+  <section class="editorial-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">Customer Favorites</span>
+        <h2 class="section-title">MADE TO BE CRAVED</h2>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Asymmetric Large Item -->
+        <div class="col-lg-7">
+          <div class="featured-card featured-card-large fade-up-element">
+            <span class="featured-badge">Chef's Special</span>
+            <div class="featured-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=80" alt="Smoky Smash Burger">
+            </div>
+            <div class="featured-card-content">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h3 class="featured-card-title text-white">Smoky Smash Burger</h3>
+                  <p class="text-white-50">Double smash beef patty, caramelized onions, smoked cheese, special house sauce, toasted brioche bun.</p>
+                </div>
+                <div class="featured-card-price text-end">₹249</div>
+              </div>
+              <button onclick="addToCart('smash-burger', 'Smoky Smash Burger', 249, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary mt-3 btn-add-cart" data-id="smash-burger">
+                <i class="bi bi-plus-lg"></i> ADD TO CART
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Smaller Items side column -->
+        <div class="col-lg-5 d-flex flex-column gap-4">
+          <!-- Item 2 -->
+          <div class="featured-card fade-up-element">
+            <div class="featured-card-img-wrapper small">
+              <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" alt="Fire Chicken Burger">
+            </div>
+            <div class="featured-card-content small">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="featured-card-title text-white fs-4">Fire Chicken Burger</h4>
+                  <p class="text-white-50" style="font-size: 0.85rem;">Crispy fried chicken breast dipped in hot chili oil, coleslaw, jalapeños.</p>
+                </div>
+                <div class="featured-card-price">₹279</div>
+              </div>
+              <button onclick="addToCart('fire-burger', 'Fire Chicken Burger', 279, 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary mt-2 py-2 px-3 btn-add-cart" data-id="fire-burger">
+                <i class="bi bi-plus-lg"></i> ADD
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="featured-card fade-up-element">
+            <div class="featured-card-img-wrapper small">
+              <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80" alt="Loaded Peri Peri Fries">
+            </div>
+            <div class="featured-card-content small">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="featured-card-title text-white fs-4">Loaded Peri Peri Fries</h4>
+                  <p class="text-white-50" style="font-size: 0.85rem;">Golden fries dusted with peri peri seasoning, melted cheese sauce, green onions.</p>
+                </div>
+                <div class="featured-card-price">₹149</div>
+              </div>
+              <button onclick="addToCart('peri-fries', 'Loaded Peri Peri Fries', 149, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=150&q=80')" class="btn-crave btn-crave-primary mt-2 py-2 px-3 btn-add-cart" data-id="peri-fries">
+                <i class="bi bi-plus-lg"></i> ADD
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Cravebox Section -->
+  <section class="feature-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">Our Philosophy</span>
+        <h2 class="section-title">WHY PEOPLE CRAVE US</h2>
+      </div>
+
+      <div class="row g-4 stagger-container">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-fire"></i>
+            </div>
+            <h3 class="h4 text-white">Freshly Prepared</h3>
+            <p>We don't pre-cook. Every single order is prepared fresh from scratch only after you click place order.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <h3 class="h4 text-white">Fast Delivery</h3>
+            <p>Our kitchen routing systems and delivery riders ensure your food arrives piping hot within 30 minutes.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h3 class="h4 text-white">Premium Ingredients</h3>
+            <p>From fresh farm-to-table vegetables to organic custom-blended spices and premium meats.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-block">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h3 class="h4 text-white">Packed With Care</h3>
+            <p>Custom-engineered thermal packaging that seals in steam and locks in crispy texture during transit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="steps-section">
+    <div class="container text-center">
+      <span class="eyebrow">Easy Ordering</span>
+      <h2 class="section-title mb-5">HOW IT WORKS</h2>
+
+      <div class="row g-5 stagger-container">
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="text-white">Choose</h3>
+            <p>Select your favorite chef-crafted meals from our premium, diverse menu.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="text-white">Order</h3>
+            <p>Place your order online securely. Apply coupons to get amazing discounts.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="text-white">Enjoy</h3>
+            <p>Track your delivery rider and dig in as fresh, hot food arrives at your door.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Experience (Cinematic Parallax) -->
+  <section class="cta-banner" style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container cta-banner-content">
+      <span class="eyebrow text-warning">Cloud Kitchen Revolution</span>
+      <h2 class="display-font text-white" style="font-size: clamp(3rem, 6vw, 5rem); line-height: 1;">YOUR CRAVINGS. OUR KITCHEN.</h2>
+      <p class="mx-auto text-white-50 my-4" style="max-width: 600px; font-size: 1.1rem;">
+        No crowded dining rooms. No unnecessary waiting. Just high-quality, chef-made food prepared fresh in our state-of-the-art cloud kitchen and delivered right to you.
+      </p>
+      <a href="orders.html" class="btn-crave btn-crave-primary mt-3">ORDER NOW</a>
+    </div>
+  </section>
+
+  <!-- Live Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4 stagger-container">
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="25" data-suffix="K+">0</div>
+            <div class="stat-label">Orders Delivered</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="4.9" data-suffix="/5">0</div>
+            <div class="stat-label">Customer Rating</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="30" data-suffix=" MIN">0</div>
+            <div class="stat-label">Avg Delivery Time</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Freshly Cooked</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Customer Testimonial -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-container fade-up-element">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <i class="bi bi-quote quote-icon"></i>
+            <blockquote class="testimonial-text text-white">
+              "The Smokey Smash Burger arrived hot, fresh and honestly tasted like it came straight from a fine-dining restaurant. The packaging is incredible—nothing was soggy. Cravebox is easily my go-to choice now."
+            </blockquote>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" alt="Customer" class="rounded-circle border border-danger border-2" style="width: 60px; height: 60px; object-fit: cover;">
+              <div>
+                <h5 class="m-0 text-white fw-bold">Aishwarya Sen</h5>
+                <div class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="rounded-3 overflow-hidden border border-secondary" style="height: 300px;">
+              <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=500&q=80" alt="Fresh wings" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-banner" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80'); border-top: 1px solid var(--border-color);">
+    <div class="container cta-banner-content">
+      <h2 class="display-font text-white" style="font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1;">WHAT ARE YOU CRAVING TODAY?</h2>
+      <p class="mx-auto text-white-50 my-4" style="max-width: 500px;">
+        Your next favorite meal is just a few clicks away. Fresh food, fast delivery.
+      </p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="orders.html" class="btn-crave btn-crave-primary">ORDER NOW</a>
+        <a href="menu.html" class="btn-crave btn-crave-secondary">VIEW MENU</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="crave-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="footer-logo">
+            <i class="bi bi-box-seam-fill"></i> CRAVE<span>BOX</span>
+          </a>
+          <p class="mb-4">
+            Fresh food. Bold flavors. Delivered fast. We prepare restaurant-quality meals in our modern cloud kitchen and deliver them hot to your door.
+          </p>
+          <div class="contact-social-icons">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <h4 class="footer-link-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="orders.html">Order Online</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h4 class="footer-link-heading">Contact Info</h4>
+          <ul class="footer-links-list text-white-50">
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-geo-alt-fill text-danger"></i> Sector 62, Noida, UP, India</li>
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-telephone-fill text-danger"></i> +91 98765 43210</li>
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-envelope-fill text-danger"></i> support@cravebox.in</li>
+            <li class="d-flex gap-2 align-items-center"><i class="bi bi-clock-fill text-danger"></i> 11:00 AM — 11:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h4 class="footer-link-heading">Subscribe</h4>
+          <p class="mb-3">Get exclusive offers, custom discount coupons, and new menu notifications.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required aria-label="Email Address">
+            <button type="submit" class="btn-crave btn-crave-primary py-2 px-3">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="m-0 text-white-50">&copy; <span id="current-year"></span> CRAVEBOX. All rights reserved.</p>
+        <p class="m-0 text-white-50">Designed with passion for premium cravings.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Cart Badge Floating -->
+  <a href="orders.html" class="mobile-cart-badge">
+    <i class="bi bi-cart3"></i>
+    <span class="mobile-cart-count">0</span>
+  </a>
+
+  <!-- Toast Container -->
+  <div class="crave-toast"></div>
+
+  <!-- Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
