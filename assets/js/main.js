@@ -263,6 +263,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
+     Auto-Sliding Category Track (Mobile, Tablet, 1024px, Desktop)
+     ========================================================================== */
+  const categoryScroll = document.querySelector('.category-scroll');
+  if (categoryScroll && categoryScroll.children.length > 0) {
+    // Clone category items for infinite loop sliding
+    const originalContent = categoryScroll.innerHTML;
+    categoryScroll.innerHTML += originalContent;
+
+    let isPaused = false;
+    let scrollSpeed = 0.8; // Smooth 60fps sliding speed
+
+    categoryScroll.addEventListener('mouseenter', () => isPaused = true);
+    categoryScroll.addEventListener('mouseleave', () => isPaused = false);
+    categoryScroll.addEventListener('touchstart', () => isPaused = true, { passive: true });
+    categoryScroll.addEventListener('touchend', () => isPaused = false, { passive: true });
+
+    function autoSlideStep() {
+      if (!isPaused) {
+        categoryScroll.scrollLeft += scrollSpeed;
+        const halfWidth = categoryScroll.scrollWidth / 2;
+        if (categoryScroll.scrollLeft >= halfWidth) {
+          categoryScroll.scrollLeft -= halfWidth;
+        }
+      }
+      requestAnimationFrame(autoSlideStep);
+    }
+    requestAnimationFrame(autoSlideStep);
+  }
+
+  /* ==========================================================================
      6. Desktop-Only Premium 3D Tilt & Magnetic Buttons
      ========================================================================== */
   const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
